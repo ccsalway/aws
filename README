@@ -1,9 +1,10 @@
 manual:
 - create account
 - change payment currency
-- create IAM user (InitialSetupUser)
+- create IAM user (SetupSystemUser)
     - with Programmatic access
     - attach AdministratorAccess policy
+- add AccessKeyId/SecretKeyId into aws configure
 -
 
 presteps:
