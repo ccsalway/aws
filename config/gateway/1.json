@@ -20,19 +20,19 @@
       },
       {
         "name": "EC2VpnServerPolicy",
-        "document": "docs/policies/ec2vpnserverpolicy.json",
+        "document": "docs/policies/ec2vpnserver.json",
         "variables": {}
       },
       {
         "name": "EC2JumpboxPolicy",
-        "document": "docs/policies/ec2jumpboxpolicy.json",
+        "document": "docs/policies/ec2jumpbox.json",
         "variables": {
           "s3bucketname": "vivace.poddev"
         }
       },
       {
         "name": "VPCFlowLogPolicy",
-        "document": "docs/policies/vpcflowlogpolicy.json",
+        "document": "docs/policies/vpcflowlog.json",
         "variables": {}
       }
     ],
