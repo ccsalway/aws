@@ -1,0 +1,12 @@
+{
+  "iam": {
+    "policies": {
+      "pod1-assumerole-admin": {
+        "document": "docs/policies/pod1-assumerole-admin.json",
+        "variables": {
+          "accountid": "{{accountid}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "account": {
+    "id": "",
+    "alias": "gateway"
+  },
+  "kms": [
+    {
+      "alias": "gateway/key",
+      "policy": ""
+    }
+  ],
+  "iam": {
+    "policies": [
+      {
+        "name": "IAMUserSelfService",
+        "document": "docs/policies/iamuserselfservice.json",
+        "variables": {
+          "s3bucketname": "vivace.poddev"
+        }
+      },
+      {
+        "name": "EC2VpnServerPolicy",
+        "document": "docs/policies/ec2vpnserverpolicy.json",
+        "variables": {}
+      },
+      {
+        "name": "EC2JumpboxPolicy",
+        "document": "docs/policies/ec2jumpboxpolicy.json",
+        "variables": {
+          "s3bucketname": "vivace.poddev"
+        }
+      },
+      {
+        "name": "VPCFlowLogPolicy",
+        "document": "docs/policies/vpcflowlogpolicy.json",
+        "variables": {}
+      }
+    ],
+    "roles": [
+      {
+        "name": "EC2VpnServerRole",
+        "policies": [
+          "CloudWatchAgentServerPolicy",
+          "EC2VpnServerPolicy"
+        ]
+      },
+      {
+        "name": "EC2JumpboxServerRole",
+        "policies": [
+          "CloudWatchAgentServerPolicy",
+          "EC2JumpboxPolicy"
+        ]
+      },
+      {
+        "name": "EC2ProxyServerRole",
+        "policies": [
+          "CloudWatchAgentServerPolicy"
+        ]
+      },
+      {
+        "name": "VPCFlowLogRole",
+        "policies": [
+          "VPCFlowLogPolicy"
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "VpnUsers",
+        "policies": []
+      }
+    ]
+  }
+}
