@@ -18,4 +18,7 @@ AWS_ACCOUNT_ID = os.environ["AWS_ACCOUNT_ID"]
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 
+# changing the master account alias will cause new S3 buckets to be created
+# and will require users to be informed of the new alias for logging in.
+# Therefore it is advised not to change it once set.
 MASTER_ACCOUNT_ALIAS = 'aws-pod-dev'
