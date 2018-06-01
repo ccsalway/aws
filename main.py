@@ -117,9 +117,9 @@ iam.update_account_password_policy(
 account_alias = iam.list_account_aliases()['AccountAliases'][0]
 
 try:
-    if account_alias != 'aws-pod-dev':
+    if account_alias != MASTER_ACCOUNT_ALIAS:
         iam.create_account_alias(
-            AccountAlias='aws-pod-dev'
+            AccountAlias=MASTER_ACCOUNT_ALIAS
         )
 except iam.exceptions.EntityAlreadyExistsException, e:
     exit(e)
